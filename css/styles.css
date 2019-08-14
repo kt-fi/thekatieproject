@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+
+
+.top-container {
+  background-color: #3a1f5d;
+  color: #f6d365;
+  padding-top: 1.5em;
+  position: relative;
+}
+
+.middle-container {
+  padding: 50px 0;
+}
+
+.bottom-container {
+  background-color: #f0d78c;
+  padding: 50px 0;
+  line-height: 3;
+}
+
+h1 {
+  margin-top: 75px;
+  color: #66BFBF;
+  font-size: 4.5rem;
+  line-height: 2;
+}
+
+
+h2 {
+  color: #66BFBF;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #11999E;
+}
+
+a {
+  font-weight: bold;
+  color: #11999E;
+  padding: 0 15px 0 15px;
+  text-decoration: none;
+}
+
+hr {
+  width: 5%;
+  border-top: 5px dotted gray;
+  margin: 100px auto;
+}
+
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.top-cloud {
+  position: relative;
+  left: 300px;
+  top: 50px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  bottom: 300px;
+  left: 300px;
+}
+
+.katie-pic {
+  border-radius: 150px;
+  margin: 20px;
+}
+
+.missing {
+  width: 25%;
+  float: left;
+  padding-right: 30px;
+}
+
+.missing-2 {
+  width: 25%;
+  float: right;
+  padding-left: 30px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.btn {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+.lost-cat-p {
+  margin-bottom: 50px;
+}
