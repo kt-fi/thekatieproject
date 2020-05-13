@@ -111,7 +111,7 @@ html {
     margin: 0 3rem;
     margin-bottom: 1.5rem; }
   .intro__img {
-    background-image: url(/img/sansilvestre.jpg);
+    background-image: url(../img/sansilvestre.jpg);
     background-size: cover;
     grid-column: 4 / -1;
     margin: 1rem; }
