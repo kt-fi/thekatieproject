@@ -15,7 +15,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 92vh max-content 35rem;
+  grid-template-rows: 92vh max-content max-content;
   background-color: white; }
 
 .header {
@@ -111,10 +111,10 @@ html {
     margin: 0 3rem;
     margin-bottom: 1.5rem; }
   .intro__img {
-    background-image: url(../img/sansilvestre.jpg);
-    background-size: cover;
-    grid-column: 4 / -1;
-    margin: 1rem; }
+    width: 100%;
+    height: auto;
+    grid-column: 4 / 6;
+    margin-right: 2rem; }
 
 .date {
   font-size: 1rem;
