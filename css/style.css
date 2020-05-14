@@ -25,7 +25,7 @@ body {
       grid-template-rows: 90vh max-content max-content; } }
   @media only screen and (max-width: 600px) {
     .container {
-      grid-template-rows: 70vh max-content max-content; } }
+      grid-template-rows: 55vh max-content max-content; } }
 
 .header {
   background-color: rgba(89, 241, 255, 0.39);
@@ -43,7 +43,7 @@ body {
     .header {
       padding: 1rem 0 0 0;
       align-content: start;
-      height: 70vh; } }
+      height: 55vh; } }
   .header__title {
     color: #eb4558;
     height: 100%;
@@ -61,7 +61,7 @@ body {
     @media only screen and (max-width: 600px) {
       .header__title {
         font-size: 7rem;
-        height: 30vh;
+        height: 20vh;
         margin: 15%; } }
     @media only screen and (max-height: 500px) {
       .header__title {
@@ -339,7 +339,8 @@ body {
   grid-template-rows: repeat(4, 8rem);
   justify-items: center;
   font-family: "Open Sans", sans-serif;
-  color: lightgray; }
+  color: lightgray;
+  padding-top: 2rem; }
   @media only screen and (max-width: 1080px) {
     .footer {
       width: 100%;
@@ -351,12 +352,13 @@ body {
     font-family: "Josefin Sans", sans-serif;
     font-size: 3rem;
     color: #eb4558;
-    align-self: center; }
+    align-self: center;
+    padding: 5rem 0 5rem 0; }
     @media only screen and (max-width: 600px) {
       .footer__header {
         width: 70%;
         text-align: center;
-        padding-top: 3rem; } }
+        padding: 5rem 0 3rem 0; } }
   .footer__nav__box {
     display: flex;
     width: 60vw;
@@ -403,14 +405,7 @@ body {
   z-index: -1;
   opacity: 1;
   overflow: hidden; }
-  @media only screen and (max-width: 600px) {
-    .bg-video {
-      height: 75%; } }
   .bg-video__content {
     height: 95%;
     width: 100%;
     object-fit: cover; }
-
-.mobile__pic {
-  background-image: url(../img/sansilvestrehead.jpg);
-  z-index: 300; }
