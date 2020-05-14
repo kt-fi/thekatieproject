@@ -6,7 +6,7 @@ $(window).ready(function(){
     if( width < 600 ){
      $(".bg-video").removeClass("bg-video")
     $(".header").css("background-color", "transparent")
-    $(".header").css("background-image", "linear-gradient(rgba(89, 241, 255, 0.39), rgba(89, 241, 255, 0.39)), url(../img/sansilvestrehead.jpg)")
+    $(".header").css("background-image", "linear-gradient(rgba(89, 241, 255, 0.39), rgba(89, 241, 255, 0.39)), url(img/sansilvestrehead.jpg)")
     $(".header").css("background-size", "cover")
 
     }else if (width >600){
@@ -20,7 +20,7 @@ $(window).on("resize", function(){
     if( width < 600 ){
      $(".bg-video").remove("#video")
     $(".header").css("background-color", "transparent")
-    $(".header").css("background-image", "linear-gradient(rgba(89, 241, 255, 0.39), rgba(89, 241, 255, 0.39)), url(../img/sansilvestrehead.jpg)")
+    $(".header").css("background-image", "linear-gradient(rgba(89, 241, 255, 0.39), rgba(89, 241, 255, 0.39)), url(img/sansilvestrehead.jpg)")
     $(".header").css("background-size", "cover")
 
     }else if (width >600){
