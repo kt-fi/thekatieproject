@@ -15,8 +15,11 @@ html {
 .container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 92vh max-content max-content;
+  grid-template-rows: 90vh max-content max-content;
   background-color: white; }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      grid-template-rows: 90vh max-content max-content; } }
 
 .header {
   background-color: rgba(89, 241, 255, 0.39);
@@ -27,6 +30,12 @@ html {
   justify-content: center;
   align-content: center;
   align-items: center; }
+  @media only screen and (max-width: 1200px) {
+    .header {
+      height: 90vh; } }
+  @media only screen and (max-width: 600px) {
+    .header {
+      padding: 5rem 0 0 0; } }
   .header__title {
     color: #eb4558;
     height: 100%;
@@ -34,12 +43,37 @@ html {
     font-family: "Josefin Sans", sans-serif;
     text-shadow: 1px 2px 3px black;
     margin-left: 18rem; }
+    @media only screen and (max-width: 1200px) {
+      .header__title {
+        height: 50vh; } }
+    @media only screen and (max-width: 900px) {
+      .header__title {
+        height: 45vh;
+        margin-left: 25%; } }
+    @media only screen and (max-width: 600px) {
+      .header__title {
+        font-size: 7rem;
+        height: 30vh;
+        margin: 15%; } }
   .header__slogan {
     font-size: 5rem;
     color: #f78259;
     font-family: 'Rokkitt', serif;
     text-shadow: 1px 2px 3px black;
     padding-right: 20rem; }
+    @media only screen and (max-width: 1200px) {
+      .header__slogan {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        margin-left: 18rem; } }
+    @media only screen and (max-width: 900px) {
+      .header__slogan {
+        margin-left: 15%; } }
+    @media only screen and (max-width: 600px) {
+      .header__slogan {
+        font-size: 4rem;
+        margin-left: 10%;
+        width: 120%; } }
 
 .nav__box {
   grid-column: 1 / -1;
@@ -96,14 +130,21 @@ html {
   grid-template-columns: repeat(5, 1fr);
   background-color: #e6e6e6;
   margin: 4rem 4rem 4rem 4rem; }
+  @media only screen and (max-width: 900px) {
+    .intro {
+      margin: 4rem 0 4rem 0; } }
   .intro__text {
     grid-column: 1 / 4;
     border-left: 3px solid #eb4558; }
+    @media only screen and (max-width: 600px) {
+      .intro__text {
+        grid-column: 1 / -1; } }
   .intro__header {
     font-family: "Josefin Sans", sans-serif;
     color: #272626;
     font-size: 4rem;
     font-weight: 400;
+    padding-top: 1rem;
     margin: 0 1rem 1rem 3rem; }
   .intro__main--text {
     font-family: "Open Sans", sans-serif;
@@ -115,13 +156,19 @@ html {
     height: auto;
     grid-column: 4 / 6;
     margin-right: 2rem; }
-
-.date {
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
-  margin: 0 3rem;
-  padding-top: 22rem;
-  color: #575757; }
+    @media only screen and (max-width: 900px) {
+      .intro__img {
+        margin: auto 0; } }
+    @media only screen and (max-width: 600px) {
+      .intro__img {
+        grid-column: 1 / -1;
+        border-left: 3px solid #eb4558; } }
+  .intro .date {
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    margin: 0 3rem;
+    padding-top: 22rem;
+    color: #575757; }
 
 .locations {
   grid-column: 1 / -1;
@@ -135,6 +182,16 @@ html {
   background-image: linear-gradient(to right bottom, #cccccc, #e6e6e6);
   margin: 0 4rem 4rem 4rem;
   padding-bottom: 4rem; }
+  @media only screen and (max-width: 1180px) {
+    .locations {
+      margin: 0 1rem 4rem 1rem;
+      grid-gap: 0rem; } }
+  @media only screen and (max-width: 1080px) {
+    .locations {
+      grid-template-columns: repeat(auto-fill, minmax(60rem, min-content));
+      grid-row-gap: 3rem;
+      width: 100%;
+      margin: 2rem 0; } }
   .locations__header {
     font-size: 4rem;
     font-family: "Josefin Sans", sans-serif;
@@ -151,6 +208,13 @@ html {
   background-color: #e6e6e6;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.445);
   transition: all .2s; }
+  @media only screen and (max-width: 1080px) {
+    .card {
+      width: 40vw;
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 600px) {
+    .card {
+      width: 80vw; } }
   .card:hover {
     transform: translateY(-3px); }
   .card__header {
@@ -161,11 +225,17 @@ html {
     border-top: 3px solid #639a67;
     color: #3b3b3b;
     border-radius: 4px; }
+    @media only screen and (max-width: 1080px) {
+      .card__header {
+        font-size: 2rem; } }
   .card__img--pic {
     width: 100%;
     height: 20rem;
     border-bottom: 3px solid #639a67;
     border-top: 3px solid #639a67; }
+    @media only screen and (max-width: 1080px) {
+      .card__img--pic {
+        height: 100%; } }
   .card__text {
     padding: 1.5rem;
     font-family: "Open Sans", sans-serif;
@@ -173,9 +243,14 @@ html {
 
 .chris {
   grid-column: 1 /-1;
+  grid-row: 5 / 6;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 4rem; }
+  @media only screen and (max-width: 1080px) {
+    .chris {
+      grid-template-columns: 1fr;
+      margin-left: 0; } }
   .chris__header {
     grid-column: 1 / -1;
     font-family: "Josefin Sans", sans-serif;
@@ -189,6 +264,9 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, max-content); }
+  @media only screen and (max-width: 900px) {
+    .shoes {
+      width: 100%; } }
   .shoes__header {
     grid-column: 1 / -1;
     color: #3b3b3b;
@@ -210,6 +288,11 @@ html {
   text-align: center;
   background-image: linear-gradient(to left, #cccccc, #e6e6e6);
   margin-right: 4rem; }
+  @media only screen and (max-width: 1080px) {
+    .strava {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 3rem; } }
   .strava__header {
     font-size: 3rem;
     font-family: "Josefin Sans", sans-serif;
@@ -218,6 +301,7 @@ html {
 
 .footer {
   grid-column: 1/ -1;
+  grid-row: 6 / 7;
   margin: 2rem 4rem;
   background-color: #3b3b3b;
   display: grid;
@@ -225,11 +309,20 @@ html {
   justify-items: center;
   font-family: "Open Sans", sans-serif;
   color: lightgray; }
+  @media only screen and (max-width: 1080px) {
+    .footer {
+      width: 100%;
+      margin: 2rem 0 0 0; } }
   .footer__header {
     font-family: "Josefin Sans", sans-serif;
     font-size: 3rem;
     color: #eb4558;
     align-self: center; }
+    @media only screen and (max-width: 600px) {
+      .footer__header {
+        width: 70%;
+        text-align: center;
+        padding-top: 3rem; } }
   .footer__nav__box {
     display: flex;
     width: 60vw;
@@ -248,12 +341,19 @@ html {
       border-bottom: 2px solid #f78259; }
   .footer__copyright {
     align-self: center; }
+    @media only screen and (max-width: 600px) {
+      .footer__copyright {
+        width: 40%;
+        text-align: center; } }
   .footer__icons {
     align-self: center;
     font-size: 2rem;
     width: 20%;
     display: flex;
     justify-content: space-evenly; }
+    @media only screen and (max-width: 900px) {
+      .footer__icons {
+        width: 40%; } }
 
 .fab:hover, .far:hover {
   transform: scale(1.1); }
@@ -264,12 +364,12 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 95%;
   width: 100%;
   z-index: -1;
   opacity: 1;
   overflow: hidden; }
   .bg-video__content {
-    height: 100%;
+    height: 95%;
     width: 100%;
     object-fit: cover; }
