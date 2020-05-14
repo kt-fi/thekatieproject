@@ -12,6 +12,9 @@ html {
     html {
       font-size: 50%; } }
 
+body {
+  overflow-x: hidden; }
+
 .container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -20,6 +23,9 @@ html {
   @media only screen and (max-width: 1200px) {
     .container {
       grid-template-rows: 90vh max-content max-content; } }
+  @media only screen and (max-width: 600px) {
+    .container {
+      grid-template-rows: 70vh max-content max-content; } }
 
 .header {
   background-color: rgba(89, 241, 255, 0.39);
@@ -35,7 +41,9 @@ html {
       height: 90vh; } }
   @media only screen and (max-width: 600px) {
     .header {
-      padding: 5rem 0 0 0; } }
+      padding: 1rem 0 0 0;
+      align-content: start;
+      height: 70vh; } }
   .header__title {
     color: #eb4558;
     height: 100%;
@@ -133,6 +141,9 @@ html {
   @media only screen and (max-width: 900px) {
     .intro {
       margin: 4rem 0 4rem 0; } }
+  @media only screen and (max-width: 600px) {
+    .intro {
+      margin: 2rem 0 1rem 0; } }
   .intro__text {
     grid-column: 1 / 4;
     border-left: 3px solid #eb4558; }
@@ -191,7 +202,7 @@ html {
       grid-template-columns: repeat(auto-fill, minmax(60rem, min-content));
       grid-row-gap: 3rem;
       width: 100%;
-      margin: 2rem 0; } }
+      margin: 1rem 0; } }
   .locations__header {
     font-size: 4rem;
     font-family: "Josefin Sans", sans-serif;
@@ -277,6 +288,11 @@ html {
   .shoes__img {
     width: 100%;
     height: auto; }
+    @media only screen and (max-width: 900px) {
+      .shoes__img {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 2rem; } }
   .shoes__text {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
@@ -313,6 +329,9 @@ html {
     .footer {
       width: 100%;
       margin: 2rem 0 0 0; } }
+  @media only screen and (max-width: 600px) {
+    .footer {
+      margin-top: 1; } }
   .footer__header {
     font-family: "Josefin Sans", sans-serif;
     font-size: 3rem;
@@ -369,6 +388,9 @@ html {
   z-index: -1;
   opacity: 1;
   overflow: hidden; }
+  @media only screen and (max-width: 600px) {
+    .bg-video {
+      height: 75%; } }
   .bg-video__content {
     height: 95%;
     width: 100%;
