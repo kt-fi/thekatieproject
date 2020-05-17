@@ -397,17 +397,18 @@ body {
 .mobile__nav__button {
   position: fixed;
   top: 2rem;
-  right: 5rem;
+  right: 3rem;
   background-color: #3b3b3b;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
   box-shadow: 3px 3px 3px #2e2e2e;
-  z-index: 3; }
+  z-index: 3;
+  transition: all .8s; }
   .mobile__nav__button__before {
     position: fixed;
     top: 2rem;
-    right: 5rem;
+    right: 3rem;
     background-color: #3b3b3b;
     height: 6rem;
     width: 6rem;

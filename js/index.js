@@ -38,6 +38,8 @@ var navOpen = false;
 
 function openNav() {
 navOpen = true;
+
+$(".mobile__nav__button").css("background-color", "white" )
     $(".mobile__nav__burger").css("animation", "navGone 0.2s forwards" )
      $(".mobile__nav__burger__before").css("animation", "navX2 0.5s forwards" )
     $(".mobile__nav__burger__after").css("animation", "navX 0.5s forwards" )
@@ -48,6 +50,8 @@ navOpen = true;
 
 function closeNav() {
     navOpen = false;
+
+    $(".mobile__nav__button").css("background-color", "rgb(59, 59, 59)" )
         $(".mobile__nav__burger").css("animation", "navGoneRev 2s forwards" )
          $(".mobile__nav__burger__before").css("animation", "navX2Rev 0.5s forwards" )
         $(".mobile__nav__burger__after").css("animation", "navXRev 0.5s forwards" )
