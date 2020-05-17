@@ -394,6 +394,153 @@ body {
 .fab:hover, .far:hover {
   transform: scale(1.1); }
 
+.mobile__nav__button {
+  position: fixed;
+  top: 2rem;
+  right: 5rem;
+  background-color: #3b3b3b;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px #2e2e2e;
+  z-index: 3; }
+  .mobile__nav__button__before {
+    position: fixed;
+    top: 2rem;
+    right: 5rem;
+    background-color: #3b3b3b;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    z-index: 0; }
+
+.mobile__nav__burger {
+  height: 3px;
+  width: 50%;
+  background-color: #eb4558;
+  position: absolute;
+  top: 49%;
+  right: 25%; }
+
+.mobile__nav__burger__after {
+  height: 3px;
+  width: 50%;
+  background-color: #eb4558;
+  position: absolute;
+  top: 35%;
+  right: 25%; }
+
+.mobile__nav__burger__before {
+  height: 3px;
+  width: 50%;
+  background-color: #eb4558;
+  position: absolute;
+  top: 62%;
+  right: 25%; }
+
+@keyframes navExpand {
+  0% {
+    scale: 1; }
+  100% {
+    scale: 50; } }
+
+@keyframes navX {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    top: 47%;
+    transform: rotate(135deg); } }
+
+@keyframes navX2 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    top: 47%;
+    transform: rotate(-135deg); } }
+
+@keyframes navXRev {
+  0% {
+    transform: rotate(135deg);
+    top: 47%; }
+  100% {
+    transform: rotate(0deg);
+    top: 35%; } }
+
+@keyframes navX2Rev {
+  0% {
+    transform: rotate(-135deg);
+    top: 47%; }
+  100% {
+    transform: rotate(0deg);
+    top: 62%; } }
+
+@keyframes navGone {
+  0% {
+    background-color: #eb4558; }
+  100% {
+    background-color: transparent; } }
+
+@keyframes navGoneRev {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: #eb4558; } }
+
+@keyframes navGrow {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(60); } }
+
+@keyframes navShrink {
+  0% {
+    transform: scale(60); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes linksVisibilityOn {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes linksVisibilityOff {
+  0% {
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+
+.nav__box--mob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  visibility: hidden;
+  font-family: "Josefin Sans", sans-serif;
+  color: white; }
+
+.nav__head--mob {
+  color: #eb4558;
+  font-weight: 900;
+  font-size: 5rem;
+  width: 70vw;
+  text-align: center; }
+
+.nav__link--mob:hover {
+  color: #f78259;
+  cursor: pointer; }
+
 .bg-video {
   grid-row: 1 / 2;
   grid-column: 1 / -1;
