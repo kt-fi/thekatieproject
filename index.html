@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=0 ">
     <title>Kt-Design</title>
 
@@ -34,7 +34,7 @@
                 THE MADRID RUNNERS
         </h1>
         <h2 class="header__slogan">
-                 We Love RUNNING And we Love MADRID
+                
         </h2>
     </header>
     
@@ -47,6 +47,11 @@
         <li class="nav__link"><div class="link__anim">Contact</div></li>
     </ul>
 
+    <div class="weather">
+    <h3 class="weather__header">Todays Weather:</h3>
+    <div class="weather__today">&nbsp;</div>
+    </div>
+
     <div class="intro">
         <div class="intro__text">
        <h2 class="intro__header">Todays News:</h2> 
@@ -56,7 +61,7 @@
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis nam hic asperiores e
            xplicabo distinctio itaque quibusdam culpa quos! Dolores dolorem modi aperiam corporis nesciunt perspiciatis dolor. Inventore, officia ex!
        </p>
-       <time datetime="2020-5-13" class="date">Wednesday 13th March</p>
+       <time datetime="2020-5-13" class="date"  id="weather">Wednesday 13th March</p>
         </div>
 
        <img src="img/sansilvestre.jpg" alt="" class="intro__img">
@@ -117,7 +122,7 @@
 
     <div class="strava">
         <h3 class="strava__header">
-            LATEST STAVA  ACTIVITY
+            LATEST STRAVA  ACTIVITY
         </h3>
 
         <iframe class="strava__widget" height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/30657968/latest-rides/d3b7efc33c42301ceb4b3746e266dd71eec57b52'></iframe>
@@ -140,7 +145,7 @@
         </ul>
 
 
-<p class="footer__copyright">&copy; All rights reserved, Page design and development  Christopher Hillman, <span class="footer__link--copy">kt-five Design Studio</span></p>
+<p class="footer__copyright">&copy; Copyright  <span class="year">year</span> All rights reserved, Page design and development  Christopher Hillman, <span class="footer__link--copy">kt-five Design Studio</span></p>
 
 
 <!-- FONTAWSOME ICONS -->
@@ -150,6 +155,8 @@
     <i class="fab fa-facebook-square"></i>
     <i class="fab fa-linkedin"></i>
     <i class="fab fa-twitter-square"></i>
+    <i class="fab fa-github"></i>
+    <i class="fab fa-strava"></i>
     <i class="far fa-envelope"></i>
 </section>
     
@@ -187,8 +194,7 @@
     <li class="nav__link--mob"><div class="link__anim--mob">Training</div></li>
     <li class="nav__link--mob"><div class="link__anim--mob">Racing</div></li>
     <li class="nav__link--mob"><div class="link__anim--mob">Contact</div></li>
-    
-</ul>
+ </ul>   
 
 <!-- JQUERY CDN -->
 

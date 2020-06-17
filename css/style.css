@@ -13,12 +13,14 @@ html {
       font-size: 50%; } }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  max-width: 1450px;
+  margin: 0 auto; }
 
 .container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 90vh max-content max-content;
+  grid-template-rows: 90vh;
   background-color: white; }
   @media only screen and (max-width: 1200px) {
     .container {
@@ -32,7 +34,7 @@ body {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: 60vw 1fr;
+  grid-template-columns: 40vw 1fr;
   justify-content: center;
   align-content: center;
   align-items: center; }
@@ -139,9 +141,37 @@ body {
     width: 15rem;
     padding: 0 2rem; } }
 
+.weather {
+  background-color: #fbd46d;
+  grid-column: 1 / -1;
+  height: 5rem;
+  margin-top: 1rem;
+  border: 1px solid black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  @media only screen and (max-width: 690px) {
+    .weather {
+      height: 7rem; } }
+  @media only screen and (max-width: 425px) {
+    .weather {
+      height: 8rem; } }
+  .weather__header {
+    padding-left: 5rem; }
+    @media only screen and (max-width: 425px) {
+      .weather__header {
+        padding-left: 1rem; } }
+  .weather__today {
+    padding-right: 5rem; }
+    @media only screen and (max-width: 425px) {
+      .weather__today {
+        padding-right: 1rem; } }
+
 .intro {
   grid-column: 1 / -1;
-  grid-row: 3 / 4;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background-color: #e6e6e6;
@@ -191,7 +221,6 @@ body {
 
 .locations {
   grid-column: 1 / -1;
-  grid-row: 4 / 5;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35rem, min-content));
   grid-template-rows: 10rem min-content;
@@ -265,7 +294,6 @@ body {
 
 .chris {
   grid-column: 1 /-1;
-  grid-row: 5 / 6;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 4rem; }
@@ -332,7 +360,6 @@ body {
 
 .footer {
   grid-column: 1/ -1;
-  grid-row: 6 / 7;
   margin: 2rem 4rem;
   background-color: #3b3b3b;
   display: grid;
@@ -370,6 +397,7 @@ body {
     padding: 1rem; }
     .footer__link:hover {
       transform: rotate(10deg);
+      background-color: #444444;
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.602); }
   .footer__link--copy {
     padding-bottom: 1px; }
@@ -545,9 +573,13 @@ body {
 .bg-video {
   grid-row: 1 / 2;
   grid-column: 1 / -1;
+  max-width: 1450px;
+  justify-content: center;
+  align-content: center;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: 95%;
   width: 100%;
   z-index: -1;
