@@ -47,6 +47,9 @@ body {
       padding: 1rem 0 0 0;
       align-content: start;
       height: 55vh; } }
+  @media only screen and (max-height: 500px) {
+    .header {
+      line-height: 10rem; } }
   .header__title {
     color: #eb4558;
     height: 100%;
