@@ -126,7 +126,7 @@ userLocation().then(result => { const thelocation = result.country_capital;
     }else if(thelocation == "London"){
         endLoc = leicester;
     }else{
-        console.log("your Location is not recognized")
+       endLoc = "your Location is not recognized")
     }
 
     async function getWeatherAW(woeid){
