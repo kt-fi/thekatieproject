@@ -83,34 +83,74 @@ $(".year").html(date)
 
 
 
+
+
+
+
 // WEATHER API
 
 
-const madrid = 766273
 
 // getWeather(332)
 
-async function getWeatherAW(woeid){
-try {
-      const result =  await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`)
+
+
+
+// GEOLOCATION & WEATHER
+
+// GET LOCATION
+
+async function userLocation(){
+    try {
+           const result = await fetch(`https://cors-anywhere.herokuapp.com/https://api.ipgeolocation.io/ipgeo?apiKey=097fe594b71b43329909ca30a9248d60`);
     const data = await result.json();
     console.log(data)
     return data;
-} catch(error) {
-    console.log(error)
+} catch(err){
+    console.log(err)
+}
 }
 
-}
-let dataMadrid;
-getWeatherAW(madrid).then(result => {dataMadrid = result;
-const weatherNow = Math.floor(dataMadrid.consolidated_weather[0].max_temp);
- 
-if(weatherNow < 25){
-    document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow + "&#8304;" + " nice weather for running";
-}else{
-    document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow +  "&#8304;"+" its too hot to run right now, drink water";
-    document.querySelector(".weather").style.backgroundColor ="orange"
+var thelocation;
+userLocation().then(result => { const thelocation = result.country_capital;
+
+
+// GET WEATHER
+
+    let endLoc;
+    const madrid = 766273;
+    const leicester = 26062;
+    
+    if(thelocation == "Madrid"){
+        endLoc = madrid;
+    }else if(thelocation == "London"){
+        endLoc = leicester;
+    }else{
+        console.log("your Location is not recognized")
     }
+
+    async function getWeatherAW(woeid){
+        try {
+              const result =  await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`)
+            const data = await result.json();
+            console.log(data)
+            return data;
+        } catch(error) {
+            console.log(error)
+        }
+        
+        }
+        let dataCity;
+        getWeatherAW(endLoc).then(result => {dataCity = result;
+        const weatherNow = Math.floor(dataCity.consolidated_weather[0].max_temp);
+         
+        if(weatherNow < 25){
+            document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow + "&#8304;" + " nice weather for running in " + endLoc;
+        }else{
+            document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow +  "&#8304;"+" its too hot to run right now, drink water";
+            document.querySelector(".weather").style.backgroundColor ="orange"
+            }
+        })
+        
+
 })
-
-
