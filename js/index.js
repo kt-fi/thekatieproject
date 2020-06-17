@@ -4,11 +4,13 @@
 function removeVideo() {
     $(".bg-video__content").hide()
     $(".header").css("background-color", "transparent" ).css("background-image", "linear-gradient(rgba(89, 241, 255, 0.39), rgba(89, 241, 255, 0.39)), url(img/sansilvestrehead.jpg)").css("background-size", "cover")
+    $(".mobile").show()  // BUTTON VISIBILITY ON
 }
 
 function addVideo() {
     $(".bg-video__content").show()
     $(".header").css({"background-color": ""},).css({"background-image": ""}).css({"background-size": ""})
+     $(".mobile").hide() // BUTTON VISIBILITY OFF
 }
 
 var width = $(window).width();
@@ -16,7 +18,7 @@ var width = $(window).width();
 $(window).ready(function(){
     width = $(window).width();
         if( width < 850 ){
-            removeVideo();
+        removeVideo();
     }else if (width >850){
         addVideo();
     }
@@ -28,6 +30,7 @@ $(window).on("resize", function(){
             removeVideo()
          }else if (width >850){
             addVideo();
+            closeNav();
     }
 })
 
@@ -69,5 +72,45 @@ $(".mobile__nav").click(function() {
 })
 
 
+
+
+// COPYRIGHT YEAR
+
+let date = new Date().getFullYear();
+$(".year").html(date)
+
+
+
+
+
+// WEATHER API
+
+
+const madrid = 766273
+
+// getWeather(332)
+
+async function getWeatherAW(woeid){
+try {
+      const result =  await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`)
+    const data = await result.json();
+    console.log(data)
+    return data;
+} catch(error) {
+    console.log(error)
+}
+
+}
+let dataMadrid;
+getWeatherAW(madrid).then(result => {dataMadrid = result;
+const weatherNow = Math.floor(dataMadrid.consolidated_weather[0].max_temp);
+ 
+if(weatherNow < 25){
+    document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow + "&#8304;" + " nice weather for running";
+}else{
+    document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow +  "&#8304;"+" its too hot to run right now, drink water";
+    document.querySelector(".weather").style.backgroundColor ="orange"
+    }
+})
 
 
