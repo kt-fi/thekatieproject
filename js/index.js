@@ -123,14 +123,8 @@ async function getLonLatt(){
 }
 getLonLatt().then(result => { 
    const woeid = result[0].woeid;
-
-
    const endLoc = woeid;
-
-
-
-
-
+   const locName = result[0].title;
 
 // GET WEATHER
 
@@ -151,7 +145,7 @@ getLonLatt().then(result => {
         const weatherNow = Math.floor(dataCity.consolidated_weather[0].max_temp);
          
         if(weatherNow < 25){
-            document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow + "&#8304;" + " nice weather for running in " + endLoc;
+            document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow + "&#8304;" + " nice weather for running in " + locName;
         }else{
             document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow +  "&#8304;"+" its too hot to run right now, drink water";
             document.querySelector(".weather").style.backgroundColor ="orange"
