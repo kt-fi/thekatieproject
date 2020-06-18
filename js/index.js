@@ -147,7 +147,7 @@ getLonLatt().then(result => {
         if(weatherNow < 25){
             document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow + "&#8304;" + " nice weather for running in " + locName;
         }else{
-            document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow +  "&#8304;"+" its too hot to run right now, drink water";
+            document.querySelector(".weather__today").innerHTML = "Todays current temperature is " + weatherNow +  "&#8304;"+" its too hot to run right now in  " + locName +", drink water";
             document.querySelector(".weather").style.backgroundColor ="orange"
             }
         })
