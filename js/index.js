@@ -87,19 +87,12 @@ $(".year").html(date)
 
 
 
-// WEATHER API
-
-
-
-// getWeather(332)
-
-
 
 
 // GEOLOCATION & WEATHER
 
 // GET LOCATION
-
+   
 async function userLocation(){
     try {
            const result = await fetch(`https://cors-anywhere.herokuapp.com/https://api.ipgeolocation.io/ipgeo?apiKey=097fe594b71b43329909ca30a9248d60`);
@@ -113,21 +106,34 @@ async function userLocation(){
 
 var thelocation;
 userLocation().then(result => { const thelocation = result.country_capital;
+    const long = result.longitude;
+    const latt = result.latitude;
+
+
+
+async function getLonLatt(){
+    try{
+        const result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com//api/location/search/?lattlong=${latt},${long}`);
+        const data = await result.json();
+        console.log(data)
+        return data;
+    } catch (err){
+        console.log(err)
+    }
+}
+getLonLatt().then(result => { 
+   const woeid = result[0].woeid;
+
+
+   const endLoc = woeid;
+
+
+
+
 
 
 // GET WEATHER
 
-    let endLoc;
-    const madrid = 766273;
-    const leicester = 26062;
-    
-    if(thelocation == "Madrid"){
-        endLoc = madrid;
-    }else if(thelocation == "London"){
-        endLoc = leicester;
-    }else{
-       endLoc = "your Location is not recognized")
-    }
 
     async function getWeatherAW(woeid){
         try {
@@ -152,5 +158,7 @@ userLocation().then(result => { const thelocation = result.country_capital;
             }
         })
         
+
+})
 
 })
