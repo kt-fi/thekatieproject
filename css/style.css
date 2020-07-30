@@ -270,6 +270,10 @@ body {
   justify-content: space-around;
   margin-top: 5rem;
   grid-row: 2/3; }
+  @media only screen and (max-width: 850px) {
+    .cvLogos {
+      height: 30rem;
+      padding: 1rem; } }
 
 .cvLogos__img {
   height: 10rem; }
