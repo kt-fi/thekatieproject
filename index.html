@@ -1,210 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=0 ">
-    <title>Kt-Design</title>
 
-<!-- FONTAWSOME -->
-<script src="https://kit.fontawesome.com/4eb5f2b8c9.js"></script>
+    <!-- AOS STYLES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
 
-<!-- Main Styles CSS -->
-<link rel="stylesheet" href="css/style.css">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 </head>
-<body class="container">
 
-
-    <div class="bg-video">
-        <video class="bg-video__content" id="video" autoplay muted loop>
-            <source src="img/maraton.mp4" type="video/mp4">
-           
-            Your browser is not supported!
-        </video>
-    </div>
+<body>
 
     <header class="header">
-        <h1 class="header__title">
-                THE MADRID RUNNERS
-        </h1>
-      
-    </header>
-    
-  
-    <ul class="nav__box">
-        <li class="nav__link"> <div class="link__anim">Home</div> </li>
-        <li class="nav__link"><div class="link__anim">News</div></li>
-        <li class="nav__link"><div class="link__anim">Training</div></li>
-        <li class="nav__link"><div class="link__anim">Racing</div></li>
-        <li class="nav__link"><div class="link__anim">Contact</div></li>
-    </ul>
-
-    <div class="weather">
-    <h3 class="weather__header">Todays Weather:</h3>
-    <div class="weather__today">&nbsp;</div>
-    </div>
-
-    <div class="intro">
-        <div class="intro__text">
-       <h2 class="intro__header">Todays News:</h2> 
-       <p class="intro__main--text">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis nam hic asperiores e
-           xplicabo distinctio itaque quibusdam culpa quos! Dolores dolorem modi aperiam corporis nesciunt perspiciatis dolor. Inventore, officia ex!
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis nam hic asperiores e
-           xplicabo distinctio itaque quibusdam culpa quos! Dolores dolorem modi aperiam corporis nesciunt perspiciatis dolor. Inventore, officia ex!
-       </p>
-       <span class="date"  id="weather">Wednesday 13th March</span>
-        </div>
-
-       <img src="img/sansilvestre.jpg" alt="" class="intro__img">
-    </div>
-
-    <section class="locations">
-        <h2 class="locations__header">
-            LOCATIONS
-        </h2>
-
-        <div class="card">
-            <div class="card__header">
-                Casa De Campo
-            </div>
-            <div class="card__image">
-                <img src="img/casacampo.jpg" alt="" class="card__img--pic">
-            </div>
-            <div class="card__text">
-                Casa de campo, casa de recreo vinculada en sus orígenes con la nobleza y las clases acomodadas, en la línea de las villas palladianas y las quintas y en cierto sentido relacionada con las country houses inglesas, los château franceses o los landhaus alemanes.
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__header">
-                Madrid Rio
-            </div>
-            <div class="card__image">
-                <img src="img/rio.jpg" alt="" class="card__img--pic">
-            </div>
-            <div class="card__text">
-                Madrid Río es un parque de la ciudad española de Madrid, consistente en una zona peatonal y de recreo construida entre los años 2006 a 2012 en los dos márgenes del río Manzanares, en buena parte sobre el trazado soterrado de la vía de circunvalación M-30,1​ desde el nudo Sur hasta el enlace con la A-5. En 2016, el proyecto se hizo con el galardón Veronica Rudge Green Prize in Urban Design de la Universidad de Harvard por su diseño e impacto social y cultural en la transformación del río.2
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card__header">
-                Dehesa De La Villa
-            </div>
-            <div class="card__image">
-                <img src="img/dehesa.jpg" alt="" class="card__img--pic">
-            </div>
-            <div class="card__text">
-                La Dehesa de la Villa es un parque situado al noroeste de la ciudad de Madrid (España), concretamente en el barrio de Ciudad Universitaria del distrito de Moncloa-Aravaca. Su principal característica es que mantiene su carácter forestal, estando en su mayor parte sin ajardinar. Ocupa una superficie de 64 hectáreas, tras haber sido su extensión mucho mayor en el pasado.
-            </div>
-        </div>
-    </section>
-
-
-    <section class="chris">
-        
-        <div class="shoes">
-            <h2 class="chris__header">Christopher Hillman : : RUNNER</h2>
-            <h3 class="shoes__header">ASICS GT 1000 - 7 </h3>
-            <img src="img/asicsgt.jpg" alt="" class="shoes__img">
-            <p class="shoes__text">My current running shoes are ASICS GT 1000 7, I like them because i am flat footed and they have a good instep and are nice to run in.</p>
-        </div>
-
-
-    <div class="strava">
-        <h3 class="strava__header">
-            LATEST STRAVA  ACTIVITY
-        </h3>
-
-        <iframe class="strava__widget" height='454' width='300'  src='https://www.strava.com/athletes/30657968/latest-rides/d3b7efc33c42301ceb4b3746e266dd71eec57b52'></iframe>
-    </div>
-    </section>
-
-
-    <!-- FOOOTER -->
-
-    <footer class="footer">
-        <h2 class="footer__header">THE MADRID RUNNERS</h2>
-    
-
-        <ul class="footer__nav__box">
-            <li class="footer__link"> <p class="footer__link--txt">Home</p>  </li>
-            <li class="footer__link"><p class="footer__link--txt">News</p></li>
-            <li class="footer__link"><p class="footer__link--txt">Training</p></li>
-            <li class="footer__link"><p class="footer__link--txt">Racing</p></li>
-            <li class="footer__link"><p class="footer__link--txt">Contact</p></li>
+        <img class="header__logo--small" src="img/logo-sm.png" alt="">
+        <ul class="header__links">
+            <li class="header__links--link"> Home</div>
+            </li>
+            <li class="header__links--link">About Us</div>
+            </li>
+            <li class="header__links--link">Portfolio</div>
+            </li>
+            <li class="header__links--link">Contact</div>
+            </li>
         </ul>
 
-
-<p class="footer__copyright">&copy; Copyright  <span class="year">year</span> All rights reserved, Page design and development  Christopher Hillman, <span class="footer__link--copy">kt-five Design Studio</span></p>
-
-
-<!-- FONTAWSOME ICONS -->
-
-
-<div class="footer__icons">
-    
-    <i class="fab fa-facebook-square"></i>
-    <i class="fab fa-linkedin"></i>
-    <i class="fab fa-twitter-square"></i>
-    <i class="fab fa-github"></i>
-    <i class="fab fa-strava"></i>
-    <i class="far fa-envelope"></i>
-</div>
-    
-
-    </footer>
-
-    <!-- NAV BUTTON MOBILE -->
-
-<nav class=" mobile mobile__nav">
-    <div class="mobile__nav__button__before">
-            &nbsp;
+        <div class="header__quote">
+            <h2 class="header__quote--text"> <span class="one">Dont look<span class="two"> back.... </span>
+                    </br> <span class="three">You're not</span>
+                    <span class="four">going that </span> <span class="five">way!!</span></h2>
         </div>
-    <div class="mobile__nav__button">
+
+
+        <img src="img/header-logo.png" alt="" class="header__logo--big">
+    </header>
+
+    <main class="mainSection">
+        <div class="aboutMe">
+            <div class="aboutMe__container">
+
+                <figure class=slideUpFig>
+                    <div class="aboutMe__pic">
+                        <img class="aboutMe__pic-img" src="img/picone.jpg">
+                        <div class="slideUp">
+                            <p>WEB DESIGN</p>
+                            <p>&</p>
+                            <p>CORPERATE<p>DESIGN</p>
+                        </div>
+                    </div>
+                </figure>
+                <div data-aos="fade-left" data-aos-delay="200" data-aos-once="true">
+                    <div class="aboutMe__info">
+                        
+                        <h2> About Us...</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sit laboriosam
+                            atque nulla iusto fugiat magni culpa voluptas, obcaecati omnis beatae adipisci enim
+                            itaque at, tempore quos perferendis error quia? Lorem ipsum dolor, sit amet
+                            consectetur adipisicing elit. Odit sunt rerum omnis, commodi ipsa,
+                            voluptatibus
+                            sapiente ipsam fuga mollitia suscipit obcaecati similique alias quia architecto,
+                            maxime
+                            reprehenderit voluptatum voluptate officiis. <a href="/">more...</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cvLogos">
+            <img data-aos="fade-up" data-aos-delay="250" data-aos-once="true" class="cvLogos__img cvLogos__img--1" src="img/html.png"> 
+            <img data-aos="fade-up" data-aos-delay="350" data-aos-once="true" class="cvLogos__img cvLogos__img--2" src="img/css.png">
+            <img data-aos="fade-up" data-aos-delay="450" data-aos-once="true" class="cvLogos__img cvLogos__img--3" src="img/js.png">
+            <img data-aos="fade-up" data-aos-delay="550" data-aos-once="true" class="cvLogos__img cvLogos__img--4" src="img/react.png">
+            <img data-aos="fade-up" data-aos-delay="650" data-aos-once="true" class="cvLogos__img cvLogos__img--5" src="img/ps.png">
+            <img data-aos="fade-up" data-aos-delay="750" data-aos-once="true" class="cvLogos__img cvLogos__img--6" src="img/illustrator.png">
+        </div>
+
+        </div>
+
+        <div>khas<p>fgasr</p></div>
+
         
-        <span class="mobile__nav__burger__before">
-            &nbsp;
-        </span>
-
-        <span class="mobile__nav__burger">
-            &nbsp;
-        </span>
-        <span class="mobile__nav__burger__after">
-            &nbsp;
-        </span>
-    </div>
-</nav>
+    </main>
 
 
-<!-- NAVIGATION MOBILE-->
 
-<ul class="nav__box--mob">
-    <li class="nav__head--mob"> <div class="link__anim--mob">THE <br> MADRID RUNNERS</div> </li>
-    <li class="nav__link--mob"> <div class="link__anim--mob">Home</div> </li>
-    <li class="nav__link--mob"><div class="link__anim--mob">News</div></li>
-    <li class="nav__link--mob"><div class="link__anim--mob">Training</div></li>
-    <li class="nav__link--mob"><div class="link__anim--mob">Racing</div></li>
-    <li class="nav__link--mob"><div class="link__anim--mob">Contact</div></li>
- </ul>   
 
-<!-- JQUERY CDN -->
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <!-- MY SCRIPT -->
+    <script src="js/index.js"></script>
 
-<!-- JS EXTERNAL -->
 
-<script src="js/index.js"></script>
+    <!-- AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS INITIALISE-->
+    <script>
+        AOS.init();
+    </script>
 
 </body>
-</html>
 
+</html>
