@@ -28,6 +28,28 @@ body {
   display: grid;
   grid-template-rows: max-content max-content max-content; }
 
+[data-aos="slide-in-right"] {
+  transform: translateX(50rem);
+  opacity: 0; }
+
+[data-aos="slide-in-right"].aos-animate {
+  opacity: 1;
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+@keyframes anim {
+  0% {
+    transform: translateX(50rem);
+    opacity: 0; }
+  35% {
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem);
+    opacity: 1; }
+  100% {
+    transform: translateX(0); } }
+
 .header {
   background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.589)), url(https://www.e-architect.co.uk/wp-content/uploads/2015/11/madrid-rio-landscape-design-m201115-2.jpg);
   background-size: cover;
@@ -57,7 +79,7 @@ body {
     align-self: center;
     animation-name: logoIn;
     animation-duration: 4s;
-    animation-delay: 1s;
+    animation-delay: 1ss;
     opacity: 0;
     animation-fill-mode: forwards;
     transition: all 0.5s;
@@ -299,7 +321,3 @@ body {
   .cvLogos__img--6 {
     grid-column: 7/8;
     margin: 0 3rem; }
-
-.bigger {
-  height: 20rem;
-  background-color: white; }
