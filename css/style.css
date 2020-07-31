@@ -450,22 +450,28 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.411);
+  background-color: rgba(0, 0, 0, 0);
   transition: all 2s; }
   .slideNav__drawer {
     position: absolute;
     top: 0;
     right: 0;
     transition: all 2s;
-    background-color: white;
+    background-color: #ffa6a6;
     font-family: "Raleway", sans-serif;
     font-size: 2rem;
     line-height: 4rem;
     width: 80%;
-    height: 100vh; }
+    height: 100vh;
+    transform: translateX(100%); }
+    .slideNav__drawer--tag {
+      transform: translateX(-5rem);
+      background-color: #ffa6a6;
+      border-radius: 2px;
+      height: 8rem; }
   .slideNav__header {
     margin-left: 1rem; }
   .slideNav__links {
