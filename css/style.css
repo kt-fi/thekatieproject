@@ -82,7 +82,7 @@ body {
 
 [data-aos="fade-in-pink"].aos-animate {
   animation-name: colorFadeP;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-fill-mode: forwards; }
 
 @keyframes colorFadeP {
@@ -93,7 +93,7 @@ body {
 
 [data-aos="fade-in-blue"].aos-animate {
   animation-name: colorFadeB;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-fill-mode: forwards; }
 
 @keyframes colorFadeB {
@@ -445,3 +445,38 @@ body {
     .car {
       grid-column: 1/-1;
       width: 90%; } }
+
+.slideNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.411);
+  transition: all 2s; }
+  .slideNav__drawer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 2s;
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    line-height: 4rem;
+    width: 80%;
+    height: 100vh; }
+  .slideNav__header {
+    margin-left: 1rem; }
+  .slideNav__links {
+    list-style-type: none;
+    margin-left: 1rem; }
+
+@keyframes slideNavOff {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(80%); } }
+
+.slideNav__drawerOff {
+  transform: translateX(80%); }
