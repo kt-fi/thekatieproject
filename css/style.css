@@ -381,14 +381,14 @@ body {
   grid-row: 2/3; }
   @media only screen and (max-width: 850px) {
     .cvLogos {
-      height: 20rem;
+      height: 25rem;
       padding: 0 0 0 0; } }
 
 .cvLogos__img {
   height: 10rem; }
   @media only screen and (max-width: 850px) {
     .cvLogos__img {
-      height: 9rem;
+      height: 8rem;
       margin-left: 1.5rem;
       padding-bottom: 2rem; } }
   .cvLogos__img--1 {
