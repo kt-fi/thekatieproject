@@ -80,6 +80,12 @@ body {
 [data-aos="fade-in"].aos-animate {
   opacity: 1; }
 
+[data-aos="fade-in-pink"] {
+  background-color: #fff8f7; }
+
+[data-aos="fade-in-pink"].aos-animate {
+  background-color: #ffe7e3; }
+
 .header {
   background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.589)), url(https://www.e-architect.co.uk/wp-content/uploads/2015/11/madrid-rio-landscape-design-m201115-2.jpg);
   background-size: cover;
