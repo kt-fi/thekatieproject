@@ -21,12 +21,14 @@ body {
   overflow-x: hidden;
   margin: 0 auto;
   max-width: 1350px;
-  height: auto; }
+  height: auto;
+  background-color: #f1f1f1; }
 
 .mainSection {
   max-width: 1350px;
   display: grid;
-  grid-template-rows: max-content max-content max-content; }
+  grid-template-rows: max-content max-content max-content;
+  background-color: white; }
 
 [data-aos="slide-in-right"] {
   transform: translateX(50rem);
@@ -49,6 +51,34 @@ body {
     opacity: 1; }
   100% {
     transform: translateX(0); } }
+
+[data-aos="slide-in-left"] {
+  transform: translateX(50rem);
+  opacity: 0; }
+
+[data-aos="slide-in-left"].aos-animate {
+  opacity: 1;
+  animation-name: animLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; }
+
+@keyframes animLeft {
+  0% {
+    transform: translateX(-50rem);
+    opacity: 0; }
+  35% {
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem);
+    opacity: 1; }
+  100% {
+    transform: translateX(0); } }
+
+[data-aos="fade-in"] {
+  opacity: 0; }
+
+[data-aos="fade-in"].aos-animate {
+  opacity: 1; }
 
 .header {
   background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.589)), url(https://www.e-architect.co.uk/wp-content/uploads/2015/11/madrid-rio-landscape-design-m201115-2.jpg);
@@ -205,8 +235,12 @@ body {
   height: 200px; }
 
 .aboutMe {
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
   grid-row: 1/2; }
+  @media (max-width: 850px) {
+    .aboutMe {
+      margin-bottom: 2rem; } }
   .aboutMe__container {
     height: max-content;
     max-width: 1350px;
@@ -216,13 +250,20 @@ body {
     border-right: 4px solid salmon;
     background-color: #fff8f7;
     margin-left: 2.5%;
-    margin-right: 2.5%; }
+    margin-right: 2.5%;
+    transition: all 2s; }
+    .aboutMe__container:hover {
+      background-color: #ffe7e3; }
     @media only screen and (max-width: 875px) {
       .aboutMe__container {
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content;
         margin-left: 0;
         margin-right: 0; } }
+    @media only screen and (min-width: 1380px) {
+      .aboutMe__container {
+        margin-left: 2%;
+        margin-right: 2%; } }
   .aboutMe__pic {
     width: 250px;
     height: 250px;
@@ -286,11 +327,35 @@ body {
   100% {
     font-size: 1rem; } }
 
+.section__cv {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-color: #fafdff;
+  margin: 0 2.5%;
+  transition: all 2s;
+  border-left: 4px solid #035aa6;
+  border-right: 4px solid #035aa6; }
+  @media only screen and (min-width: 1380px) {
+    .section__cv {
+      margin-left: 2%;
+      margin-right: 2%; } }
+  .section__cv:hover {
+    background-color: #e0f0ff; }
+
+.cvHeader {
+  padding: rem;
+  color: #4d4d4d;
+  font-size: 3rem;
+  font-family: "Merriweather", serif;
+  margin-bottom: 2rem;
+  margin-top: 4rem; }
+
 .cvLogos {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 5rem;
+  padding-bottom: 5rem;
   grid-row: 2/3; }
   @media only screen and (max-width: 850px) {
     .cvLogos {
@@ -321,3 +386,40 @@ body {
   .cvLogos__img--6 {
     grid-column: 7/8;
     margin: 0 3rem; }
+
+.carousel__section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem 2.5%; }
+  @media (max-width: 850px) {
+    .carousel__section {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content;
+      margin: 3rem 0.5rem 3rem 0.5rem; } }
+  .carousel__section__text {
+    grid-column: 1/3;
+    padding: 3rem;
+    margin: 0 3rem 0 0;
+    font-family: "Raleway", sans-serif;
+    color: #4d4d4d;
+    font-size: 2rem;
+    font-weight: 700; }
+    @media (max-width: 850px) {
+      .carousel__section__text {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        padding-top: 1rem; } }
+    .carousel__section__text--header {
+      margin-bottom: 1.5rem;
+      font-family: "Merriweather", serif;
+      font-size: 3rem;
+      color: #4d4d4d; }
+
+.car {
+  grid-column: 3/4;
+  width: 400px;
+  justify-self: center; }
+  @media (max-width: 850px) {
+    .car {
+      grid-column: 1/-1;
+      width: 90%; } }
