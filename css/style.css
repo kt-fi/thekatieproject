@@ -303,8 +303,8 @@ body {
     margin: 5rem; }
     @media only screen and (max-width: 875px) {
       .aboutMe__info {
-        margin-left: 1rem;
-        margin-right: 1rem; } }
+        margin-left: 2rem;
+        margin-right: 2rem; } }
   .aboutMe__info h2 {
     font-family: "Merriweather", serif;
     font-size: 3rem;
@@ -450,39 +450,74 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 2s; }
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.377);
+  transition-duration: all 2s; }
   .slideNav__drawer {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transition: all 2s;
-    background-color: #ffa6a6;
+    background-color: white;
     font-family: "Raleway", sans-serif;
     font-size: 2rem;
-    line-height: 4rem;
+    line-height: 6rem;
     width: 80%;
     height: 100vh;
-    transform: translateX(100%); }
+    transform: translateX(106%);
+    z-index: 1000;
+    padding: 10rem 0 0 8rem;
+    box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.678);
+    color: #414141; }
     .slideNav__drawer--tag {
-      transform: translateX(-5rem);
-      background-color: #ffa6a6;
-      border-radius: 2px;
-      height: 8rem; }
+      visibility: hidden;
+      position: fixed;
+      top: 5rem;
+      right: 4.5rem;
+      height: 4.2rem;
+      width: 4.2rem;
+      z-index: 200;
+      background-color: rgba(255, 255, 255, 0.541);
+      border-radius: 5px;
+      border: 1px solid #a7a7a7; }
+      @media (max-width: 705px) {
+        .slideNav__drawer--tag {
+          visibility: visible; } }
   .slideNav__header {
     margin-left: 1rem; }
   .slideNav__links {
     list-style-type: none;
     margin-left: 1rem; }
+  .slideNav__close {
+    width: 4rem;
+    height: 4rem;
+    background-color: #d1e1ff;
+    border: 1px solid gray; }
+    .slideNav__close:active {
+      background-color: #a6c5ff;
+      cursor: pointer; }
 
-@keyframes slideNavOff {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(80%); } }
-
-.slideNav__drawerOff {
-  transform: translateX(80%); }
+.burger {
+  width: 3rem;
+  height: 2px;
+  background-color: #969696;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem; }
+  .burger::after {
+    content: "";
+    width: 3rem;
+    height: 2px;
+    position: absolute;
+    top: 1.8rem;
+    background-color: #969696; }
+  .burger::before {
+    content: "";
+    width: 3rem;
+    height: 2px;
+    position: absolute;
+    top: 0.9rem;
+    background-color: #969696; }
