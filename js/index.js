@@ -1,10 +1,14 @@
 let width = window.innerWidth;
 
+if(width > 500){
+        
+}
+
 $(window).scroll(function(){
 
         if(scrollY > 50){
 if(width > 500){
-        $(".header__logo--small").css("top", "-0.5rem" )      
+        $(".header__logo--small").css("margin-top", "-2rem" )      
 }else if(width < 500){
         $(".header__logo--small").css("top", "-1.5rem" )    
         $(".header__logo--small").css("padding-left", "0rem" )
@@ -13,14 +17,15 @@ if(width > 500){
           
 
 
-        $(".header__logo--small").css("scale", "0.7" )
+        $(".header__logo--small").css("scale", "0.8" )
         
 
-        $(".slideNav__drawer--tag").css("top", "1.5rem" )
+        $(".slideNav__drawer--tag").css("top", "3rem" )
 
-         $(".white").css("height", "8.5rem" )
+         $(".nav").css("height", "10rem" )
 
-         $(".header__links").css("top", "1.5rem" )   
+         $(".header__links").css("top", "1.5rem" ) 
+         $(".header__links").css("padding-bottom", "1rem" )     
 if(width > 500){
         $(".header__logo--small").css("padding-left", "4rem" )
 
@@ -35,7 +40,7 @@ if(width > 500){
                 $(".header__logo--small").css("top", "2rem" )
                 $(".slideNav__drawer--tag").css("top", "5rem" )
 
-                $(".white").css("height", "13rem" )
+                $(".nav").css("height", "13rem" )
 
                 $(".header__links").css("top", "4rem" )   
         }
