@@ -102,17 +102,8 @@ body {
   100% {
     background-color: #e0f0ff; } }
 
-[data-aos="nav-shrink"].aos-animate {
-  animation-name: shrink;
-  animation-duration: 5s;
-  animation-fill-mode: forwards; }
-
-@keyframes shrink {
-  0% { }
-  100% { } }
-
 .header {
-  background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url(https://www.e-architect.co.uk/wp-content/uploads/2015/11/madrid-rio-landscape-design-m201115-2.jpg);
+  background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url("/img/rio.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -127,6 +118,9 @@ body {
   @media only screen and (max-height: 450px) {
     .header {
       height: 500px; } }
+  @media only screen and (max-width: 450px) {
+    .header {
+      background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url("/img/rio-sm.jpg"); } }
   .header__logo--small {
     grid-column: 1 /2;
     align-self: center;
@@ -141,6 +135,7 @@ body {
   .header__logo--big {
     justify-self: center;
     align-self: center;
+    padding-bottom: 10rem;
     animation-name: logoIn;
     animation-duration: 4s;
     animation-delay: 1ss;
@@ -463,6 +458,10 @@ body {
       grid-column: 1/-1;
       width: 90%; } }
 
+.carousel__Image {
+  margin-right: 2rem;
+  margin-top: 2rem; }
+
 .slideNav {
   position: fixed;
   top: 0;
@@ -482,17 +481,17 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 2rem;
     line-height: 6rem;
-    width: 80%;
+    width: 60%;
     height: 100vh;
     transform: translateX(106%);
     z-index: 1000;
-    padding: 10rem 0 0 8rem;
+    padding: 10rem 0 0 3rem;
     box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.678);
     color: #414141; }
     .slideNav__drawer--tag {
       visibility: hidden;
       position: fixed;
-      top: 5rem;
+      top: 4rem;
       right: 4.5rem;
       height: 4.2rem;
       width: 4.2rem;
@@ -560,4 +559,4 @@ body {
   justify-content: space-between;
   background-image: linear-gradient(to bottom, white 85%, rgba(255, 255, 255, 0.377) 90%, rgba(255, 255, 255, 0));
   z-index: 1;
-  transition: all 2s; }
+  transition: all 1s; }
