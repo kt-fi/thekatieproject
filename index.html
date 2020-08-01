@@ -14,14 +14,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 </head>
 
-<body>
-
+<body class="preload" onload="cssFunction()">
+  
+             
+   
     <header class="header">
-        <img class="header__logo--small" src="img/logo-sm.png" alt="">
+   <div class="white"></div>
+      <img class="header__logo--small" src="img/logo-sm.png" alt="">
         <ul class="header__links">
             <li class="header__links--link"> Home</div>
             </li>
@@ -31,7 +36,9 @@
             </li>
             <li class="header__links--link">Contact</div>
             </li>
-            <li class="slideNav__drawer--tag"><div class="burger"></div></li>
+            <li class="slideNav__drawer--tag">
+                <div class="burger"></div>
+            </li>
         </ul>
 
 
@@ -59,9 +66,9 @@
                         </div>
                     </div>
                 </figure>
-                <div data-aos="slide-in-right"   data-aos-once="true" data-aos-easing="ease-out">
-                    <div class="aboutMe__info" >
-                        
+                <div data-aos="slide-in-right" data-aos-once="true" data-aos-easing="ease-out">
+                    <div class="aboutMe__info">
+
                         <h2> About Us...</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sit laboriosam
                             atque nulla iusto fugiat magni culpa voluptas, obcaecati omnis beatae adipisci enim
@@ -78,16 +85,21 @@
         </div>
 
         <div class="carousel__section">
-           <div class="carousel__section__text"  data-aos="slide-in-left" >
-               
-         <h2 class="carousel__section__text--header">Our Work...</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cumque recusandae quas eligendi autem, consectetur voluptatum in atque veritatis temporibus provident sint quisquam omnis earum! Explicabo sint architecto numquam beatae!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quod voluptatum tempora recusandae ducimus? Mollitia aperiam fugit vero. Amet incidunt voluptatum perferendis neque nisi excepturi quia quidem dolorem, unde voluptas.
-            </p>
-           </div> 
-            
-            <img  data-aos="slide-in-right"   data-aos-once="true" data-aos-easing="ease-out" src="./img/car-1.jpg" alt="" class="car">
+            <div class="carousel__section__text" data-aos="slide-in-left">
+
+                <h2 class="carousel__section__text--header">Our Work...</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cumque recusandae quas eligendi
+                    autem, consectetur voluptatum in atque veritatis temporibus provident sint quisquam omnis earum!
+                    Explicabo sint architecto numquam beatae!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quod voluptatum tempora
+                    recusandae ducimus? Mollitia aperiam fugit vero. Amet incidunt voluptatum perferendis neque nisi
+                    excepturi quia quidem dolorem, unde voluptas.
+                </p>
+            </div>
+
+            <img data-aos="slide-in-right" data-aos-once="true" data-aos-easing="ease-out" src="./img/car-1.jpg" alt=""
+                class="car">
         </div>
 
 
@@ -95,44 +107,52 @@
 
 
         <div class="section__cv">
-<h2 class="cvHeader" data-aos="fade-in"> Curriculum Vitae...</h2>
-        <div class="cvLogos">
-            <img data-aos="fade-up" data-aos-delay="250" data-aos-once="true" class="cvLogos__img cvLogos__img--1" src="img/html.png"> 
-            <img data-aos="fade-up" data-aos-delay="350" data-aos-once="true" class="cvLogos__img cvLogos__img--2" src="img/css.png">
-            <img data-aos="fade-up" data-aos-delay="450" data-aos-once="true" class="cvLogos__img cvLogos__img--3" src="img/js.png">
-            <img data-aos="fade-up" data-aos-delay="550" data-aos-once="true" class="cvLogos__img cvLogos__img--4" src="img/react.png">
-            <img data-aos="fade-up" data-aos-delay="650" data-aos-once="true" class="cvLogos__img cvLogos__img--5" src="img/ps.png">
-            <img data-aos="fade-up" data-aos-delay="750" data-aos-once="true" class="cvLogos__img cvLogos__img--6" src="img/illustrator.png">
+            <h2 class="cvHeader" data-aos="fade-in"> Curriculum Vitae...</h2>
+            <div class="cvLogos">
+                <img data-aos="fade-up" data-aos-delay="250" data-aos-once="true" class="cvLogos__img cvLogos__img--1"
+                    src="img/html.png">
+                <img data-aos="fade-up" data-aos-delay="350" data-aos-once="true" class="cvLogos__img cvLogos__img--2"
+                    src="img/css.png">
+                <img data-aos="fade-up" data-aos-delay="450" data-aos-once="true" class="cvLogos__img cvLogos__img--3"
+                    src="img/js.png">
+                <img data-aos="fade-up" data-aos-delay="550" data-aos-once="true" class="cvLogos__img cvLogos__img--4"
+                    src="img/react.png">
+                <img data-aos="fade-up" data-aos-delay="650" data-aos-once="true" class="cvLogos__img cvLogos__img--5"
+                    src="img/ps.png">
+                <img data-aos="fade-up" data-aos-delay="750" data-aos-once="true" class="cvLogos__img cvLogos__img--6"
+                    src="img/illustrator.png">
+            </div>
         </div>
-</div>
         </div>
 
-        <div class="bigger">khas<p>fgasr</p><p></p></div>
+        <div class="bigger">khas<p>fgasr</p>
+            <p></p>
+        </div>
 
-        
+
     </main>
-<nav class="slideNav"></nav>
+    <nav class="slideNav"></nav>
 
     <div class="slideNav__drawer">
         <button class="slideNav__close">x</button>
         <h3 class="slideNav__header">The Navigator</h3>
-          <ul class="slideNav__links">
-        <li class="slideNav__links--link">Home</li>
-        <li class="slideNav__links--link">About Us</li>
-        <li class="slideNav__links--link">Portfolio</li>
-        <li class="slideNav__links--link">Contact Us</li>
-    </ul>
+        <ul class="slideNav__links">
+            <li class="slideNav__links--link">Home</li>
+            <li class="slideNav__links--link">About Us</li>
+            <li class="slideNav__links--link">Portfolio</li>
+            <li class="slideNav__links--link">Contact Us</li>
+        </ul>
 
-    
+
     </div>
-  
 
 
-    <!-- JQUERY CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   
 
     <!-- MY SCRIPT -->
     <script src="js/index.js"></script>
+  
 
 
     <!-- AOS SCRIPT -->
@@ -142,6 +162,8 @@
     <script>
         AOS.init();
     </script>
+
+
 
 </body>
 
