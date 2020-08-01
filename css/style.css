@@ -120,7 +120,7 @@ body {
       height: 500px; } }
   @media only screen and (max-width: 450px) {
     .header {
-      background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url("/img/rio-sm.jpg"); } }
+      background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url("../img/rio-sm.jpg"); } }
   .header__logo--small {
     grid-column: 1 /2;
     align-self: center;
