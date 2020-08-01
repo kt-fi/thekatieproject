@@ -103,7 +103,7 @@ body {
     background-color: #e0f0ff; } }
 
 .header {
-  background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url("/img/rio.jpg");
+  background-image: linear-gradient(to bottom, white 4%, rgba(255, 255, 255, 0.171)), url("../img/rio.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -124,14 +124,17 @@ body {
   .header__logo--small {
     grid-column: 1 /2;
     align-self: center;
-    padding-left: 4rem;
-    transform: translateX(-15rem);
+    margin-left: 4rem;
     opacity: 0;
     z-index: 5;
     transition: all 2s;
     animation-name: logoSmallIn;
     animation-duration: 1.5s;
     animation-fill-mode: forwards; }
+    @media only screen and (max-width: 429px) {
+      .header__logo--small {
+        margin-top: 3rem;
+        margin-left: 1rem; } }
   .header__logo--big {
     justify-self: center;
     align-self: center;
@@ -510,6 +513,9 @@ body {
     margin-left: 1rem; }
   .slideNav__close {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 3rem;
     left: 3rem;
     width: 4rem;
@@ -557,6 +563,7 @@ body {
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-content: center;
   background-image: linear-gradient(to bottom, white 85%, rgba(255, 255, 255, 0.377) 90%, rgba(255, 255, 255, 0));
   z-index: 1;
   transition: all 1s; }
