@@ -81,7 +81,7 @@ if (width < 500) {
         document.querySelector('.aboutMe__container').setAttribute("data-aos-duration", "1000")
         document.querySelector(".section__cv").setAttribute("data-aos-duration", "1000")
         document.querySelector(".section__cv").setAttribute("data-aos", "fade-in-blue")
-        document.querySelector(".header__logo--small").setAttribute("src", "../img/logo-xs.png")
+        document.querySelector(".header__logo--small").setAttribute("src", "img/logo-xs.png")
 }
 
 function close() {
