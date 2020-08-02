@@ -8,8 +8,9 @@ $(window).scroll(function () {
 
         if (scrollY > 50) {
 
-                $('.nav').css("height", "12rem")
-                $(".slideNav__drawer--tag").css("top", "3rem")
+                $('.nav').css("height", "8rem")
+                $(".slideNav__drawer--tag").css("top", "1rem")
+             
         //         if (width > 500) {
         //                 $(".header__logo--small").css("margin-top", "-4.5rem")
                         
@@ -39,6 +40,7 @@ $(window).scroll(function () {
                 if (scrollY < 50) {
                         $('.nav').css("height", "13rem")
                         $(".slideNav__drawer--tag").css("top", "4rem")
+                       
                 //         if (width > 500) {
                                 // $(".header__logo--small").css("margin-top", "-2rem")
                                 
@@ -79,6 +81,7 @@ if (width < 500) {
         document.querySelector('.aboutMe__container').setAttribute("data-aos-duration", "1000")
         document.querySelector(".section__cv").setAttribute("data-aos-duration", "1000")
         document.querySelector(".section__cv").setAttribute("data-aos", "fade-in-blue")
+        document.querySelector(".header__logo--small").setAttribute("src", "../img/logo-xs.png")
 }
 
 function close() {
