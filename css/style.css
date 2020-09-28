@@ -472,5 +472,8 @@ body {
   font-weight: 600;
   transition: all 1s;
   font-size: 1.5rem; }
+  @media screen and (max-width: 800px) {
+    .btn-contact {
+      margin-top: 3rem; } }
   .btn-contact:hover {
     background-color: #86adff; }
