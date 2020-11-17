@@ -1,6 +1,11 @@
+//SWITCH GLOBAL LANGUAGE -------------------------
+
+
+
 // GET LOCATION to set language ----------------------------
 
-(async()=>{
+(async()=>{ 
+      
     try{
        const response = await fetch("https://radiant-woodland-87160.herokuapp.com/geoLocation")
         const data = await response.json()
@@ -44,12 +49,12 @@ const name = document.getElementById("name")
 const email = document.getElementById("email")
 const subject = document.getElementById("subject")
 
-if(name.value == "" || email.value == "" || subject.value == ""){
+if(name.value == "" || email.value == "" || !subject.minlength){
     button.disabled = true;
 }
 
 if(name.value && email.value && subject.value){
-    console.log(name)
+    
     button.disabled = false;
 }
 
