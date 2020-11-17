@@ -23,7 +23,7 @@ html {
 body {
   margin: 0 auto;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.192), rgba(184, 184, 184, 0.253)), url("/images/rio.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.192), rgba(184, 184, 184, 0.253)), url("../images/rio.jpg");
   background-attachment: fixed;
   background-size: cover;
   font-family: "Montserrat", sans-serif;
@@ -414,8 +414,14 @@ a {
   justify-content: space-evenly;
   background-color: white;
   padding-bottom: 5rem; }
+  @media (max-width: 600px) {
+    .portfolio__container {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 85%; } }
   .portfolio__header {
-    width: 100%;
+    width: 85%;
     text-align: center;
     margin: 5rem 0;
     font-family: "Noto Serif TC", serif;
@@ -427,36 +433,48 @@ a {
     margin: 1rem;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.411);
     overflow: hidden; }
-    .portfolio__box--info {
-      width: 30rem; }
+    @media (max-width: 600px) {
+      .portfolio__box {
+        width: 100%;
+        height: 23rem; } }
     .portfolio__box--info a {
       margin: 0 auto; }
     .portfolio__box--info-list-item {
       font-size: 1.5rem;
       font-weight: 600; }
       .portfolio__box--info-list-item-text {
+        width: 25rem;
         font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 5px; }
+        text-align: justify;
+        text-justify: inter-word;
+        padding-bottom: 1.5rem; }
+        @media (max-width: 600px) {
+          .portfolio__box--info-list-item-text {
+            font-size: 1.7rem;
+            width: 100%; } }
     .portfolio__box--image {
       width: 30rem; }
+      @media (max-width: 600px) {
+        .portfolio__box--image {
+          width: 100%; } }
+    .portfolio__box--image-anim {
+      width: 30rem; }
+      @media (max-width: 600px) {
+        .portfolio__box--image-anim {
+          width: 100%; } }
     .portfolio__box--image-anim-1 {
-      width: 30rem;
       transition: all 0.1s linear, transform 8s ease; }
       .portfolio__box--image-anim-1:hover {
         transform: translateY(-65rem); }
     .portfolio__box--image-anim-2 {
-      width: 30rem;
       transition: all 0.1s linear, transform 8s ease; }
       .portfolio__box--image-anim-2:hover {
         transform: translateY(-88rem); }
     .portfolio__box--image-anim-3 {
-      width: 30rem;
       transition: all 0.1s linear, transform 8s ease; }
       .portfolio__box--image-anim-3:hover {
         transform: translateY(-70rem); }
     .portfolio__box--image-anim-4 {
-      width: 30rem;
       transition: all 0.1s linear, transform 8s ease; }
       .portfolio__box--image-anim-4:hover {
         transform: translateY(-53rem); }
@@ -619,7 +637,7 @@ a {
   height: 100vh;
   width: 100%;
   z-index: -100;
-  animation: startupUp 6s forwards; }
+  animation: startupUp 0s forwards; }
   .startupHook__loading--box {
     text-align: center; }
   .startupHook__loading--box-loadbar {
