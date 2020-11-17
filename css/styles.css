@@ -436,7 +436,7 @@ a {
     @media (max-width: 600px) {
       .portfolio__box {
         width: 100%;
-        height: 23rem; } }
+        height: 27rem; } }
     .portfolio__box--info a {
       margin: 0 auto; }
     .portfolio__box--info-list-item {
@@ -637,7 +637,7 @@ a {
   height: 100vh;
   width: 100%;
   z-index: -100;
-  animation: startupUp 0s forwards; }
+  animation: startupUp 6s forwards; }
   .startupHook__loading--box {
     text-align: center; }
   .startupHook__loading--box-loadbar {
@@ -698,11 +698,15 @@ a {
   top: 50%;
   left: 50%;
   width: 50%;
-  height: 50%;
+  height: 40%;
   background-color: #222831;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
   transform: translate(-50%, -50%);
   z-index: -100; }
+  @media (max-width: 700px) {
+    .modal {
+      width: 75%;
+      height: 30%; } }
   .modal__topbar {
     background-color: #141c2b;
     grid-row: 1/2;
