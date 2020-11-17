@@ -29,18 +29,18 @@
                    katiefive<strong>web</strong>design
             </p>
             <ul>
-                <a href="#home"><li lang="en" class="nav__link">Home</li></a>
-                <a href="#about"><li lang="en" class="nav__link">About</li></a>
-                <a href="#skills"><li lang="en" class="nav__link">Skills</li></a>
-                <a href="#portfolio"><li lang="en" class="nav__link">Portfolio</li></a>
-                <a href="#contact"><li lang="en" class="nav__link">Contact</li> </a>
+                <li lang="en" class="nav__link"><a href="#home">Home</a></li>
+                <li lang="en" class="nav__link"><a href="#about">About</a></li>
+                <a href="#skills"><li lang="en" class="nav__link">Skills</a></li>
+                <li lang="en" class="nav__link"><a href="#portfolio">Portfolio</a></li>
+                <li lang="en" class="nav__link"><a href="#contact">Contact</a></li> 
             </ul>
             <ul lang="es">
-                <a href="#home"><li lang="es" class="nav__link">Home</li></a>
-                <a href="#about"><li lang="es" class="nav__link">Sobre Nosotros</li></a>
-                <a href="#skills"><li lang="es" class="nav__link">Habilidades</li></a>
-                <a href="#portfolio"><li lang="es" class="nav__link">Portfolio</li></a>
-                <a href="#contact"><li lang="es" class="nav__link">Contacto</li></a>
+                <li lang="es" class="nav__link"><a href="#home">Home</li></a>
+                <li lang="es" class="nav__link"><a href="#about">Sobre Nosotros</a></li>
+               <li lang="es" class="nav__link"> <a href="#skills">Habilidades</a></li>
+                <li lang="es" class="nav__link"><a href="#portfolio">Portfolio</a></li>
+                <li lang="es" class="nav__link"><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
 
@@ -69,7 +69,7 @@
                   <!--ESPAÑOL-->
                   <p lang="es">Hola, Mi nombre es Chris y soy un desarrollador web inglés en Madrid!  Mis pasiones son running y desarrollo web!!
                     Si usted o su negocio está en necesidad de un sitio web dinámico moderno no dude en ponerse en contacto !!  Voy a tratar de proporcionar el mejor servicio posible y crear para usted el
-                    portal perfecto para su negocio.  Una buena presencia en línea es más importante que nunca, destacar por encima del resto y don't esperar para ponerse en contacto!!</p>
+                    portal perfecto para su negocio.  Una buena presencia en línea es más importante que nunca, destacar por encima del resto y don't esperar para ponerse en contacto!
                 </p>
             </div>
             </div>
@@ -347,10 +347,11 @@
         </div>
         <div class="portfolio__box--info">
             <h4>Run Madrid (Personal)</h4>
-            <li lang="en" class="portfolio__box--info-list-item-text">
+            
+            <ul class="portfolio__box--info-list">
+                <li lang="en" class="portfolio__box--info-list-item-text">
                 This web page i made to practice working with CSS Grid and FlexBox, along with embedded video and a weather API, and the running part is just because i like running and needed a theme to work with.
             </li>
-            <ul class="portfolio__box--info-list">
                 <li class="portfolio__box--info-list-item">
                    CSS Grid / Javascript
                 </li>
@@ -481,7 +482,7 @@
 <!-- CONTACT FORM -->
     
 <div id="contact" class="contact">
-    <form class="contact__form" id="contact__form" action="" method="POST">
+    <form class="contact__form" id="contact__form" method="POST">
     <h1 lang="en">CONTACT US</h1>
     <h1 lang="es">CONTATARNOS</h1>
     <label lang="en" class="labelName" for="name">Name:</label>
@@ -492,7 +493,7 @@
     <label lang="en" for="subject">Message:</label>
     <label lang="es" for="subject">Mensaje:</label>
     <textarea name="subject" id="subject" cols="30" rows="9" onchange="onChangeHandler()" onkeyup="onChangeHandler()" value="" required></textarea>
-    <button type="submit" class="btn-contact center send" ><p lang="en">SEND</p><p lang="es">ENVIAR</p></button>
+    <button type="submit" class="btn-contact center send" ><span lang="en">SEND</span><span lang="es">ENVIAR</span></button>
     </form>
 </div>
     </main>
@@ -602,7 +603,7 @@
             <div lang="es" class="link__anim--mob">Habilidades</div></a>
         </li>
         <li class="nav__link--mob">
-            <a href="#portfolio"> <div class="link__anim--mob">Portfolio</div>
+            <a href="#portfolio"> <div class="link__anim--mob">Portfolio</div></a>
         </li>
         <li class="nav__link--mob">
             <a href="#contact"><div lang="en" class="link__anim--mob">Contact</div>
