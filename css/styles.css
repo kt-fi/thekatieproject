@@ -145,7 +145,7 @@ button:disabled:hover {
     font-size: 1.5rem;
     margin: 1rem;
     list-style-type: none;
-    color: #dddddd;
+    color: #afafaf;
     transition: transform 0.5s; }
     .nav__link:hover {
       transform: scale(1.2); }
@@ -168,9 +168,10 @@ button:disabled:hover {
         height: 1.7rem;
         margin-right: 0.7rem; } }
 
-a {
-  color: white;
-  text-decoration: none; }
+.nav__link a {
+  color: #e4e4e4;
+  text-decoration: none;
+  font-weight: 400; }
 
 .mobile__nav__button {
   position: fixed;
@@ -343,10 +344,15 @@ a {
   @media only screen and (max-width: 800px) {
     .about {
       grid-template-columns: 100%; } }
+  .about__header {
+    text-transform: capitalize;
+    font-weight: 900;
+    color: #222831; }
   .about__text--container {
     grid-column: 1/2;
     grid-row: 1/2;
     height: min-content;
+    font-weight: 100;
     width: 100%;
     background-color: #486685; }
   .about__text--box {
@@ -572,7 +578,8 @@ a {
   grid-template-rows: repeat(4, 8rem);
   justify-items: center;
   color: lightgray;
-  padding: 7rem 0 3rem 0; }
+  padding: 7rem 0 3rem 0;
+  text-align: center; }
   @media only screen and (max-width: 1080px) {
     .footer {
       width: 100%;
