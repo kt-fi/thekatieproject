@@ -1,0 +1,87 @@
+.startupHook {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: $color-blue;;
+    height: 100vh;
+    width: 100%;
+    z-index: -100;
+    animation: startupUp 6s forwards;
+   
+    &__loading--box {
+        text-align: center;
+    }
+
+    &__loading--box-loadbar {
+        font-size: 10rem;
+    }
+
+    &__loading--box-logo {
+        font-size: 6rem;
+        font-weight: 100;
+        color: white;
+        animation: logoIntro 2s forwards; 
+        @media screen and (max-width:700px) {
+            font-size: 4rem;
+            
+        }
+    }
+
+    &__loading--welcometext {
+        font-size: 2rem;
+        padding: 3rem;
+        letter-spacing: 1.5rem;;
+        color: black;
+        text-transform: capitalize;
+        animation: logoIntro-text 2s forwards;
+    }
+}
+
+@keyframes startupUp {
+    0%{
+        z-index: 200;
+        opacity: 1;
+    }
+    80%{
+        z-index: 200;
+        opacity: 1;
+    }
+ 
+    100%{
+      z-index: -100;
+      opacity: 0;
+    }
+}
+
+@keyframes logoIntro {
+    0%{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(0.5rem);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes logoIntro-text {
+    0%{
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(-0.5rem);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,51 @@
+.modal {
+    display: grid;
+    grid-template-rows: 10% 45% 45%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height:40%;
+    background-color: $color-black;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+    transform: translate(-50%, -50%);
+
+     z-index: -100;
+
+     @media (max-width: 700px){
+         width:75%;
+         height: 30%;
+     }
+
+     &__topbar {
+         background-color:$color-blueDark;
+         grid-row: 1/2;
+         color: white;
+         font-size: 2rem;
+         padding: 1rem;
+         align-self: center;
+     }
+
+     &__message {
+         align-self: center;
+         justify-self: center;
+         color: white;
+         background-color: $color-black;
+     }
+     
+     &__button {
+        align-self: center;
+        justify-self: center;
+        background-color: $color-black;
+     }
+}
+
+.backdrop {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.349);
+    z-index: -1009;
+}

@@ -1,0 +1,122 @@
+.footer {
+    grid-column: 1/ -1 ;
+    // grid-row: 6 / 7;
+
+
+
+    background-color: $color-blue;
+
+    display: grid;
+    grid-template-rows:  repeat(4, 8rem);
+    justify-items: center;
+    
+  color: rgb(211, 211, 211);
+  padding: 7rem 0 3rem 0;
+  text-align: center;
+
+  
+  @media only screen and (max-width: 1080px) {
+    width: 100%;
+    margin: 0 0 0 0 ;
+}
+
+@media only screen and (max-width: 600px) {
+    margin-top: 1;
+  
+ }   
+
+
+    &__header {
+       
+       font-size: 4rem;
+       font-weight: 100;
+       color: white;
+       align-self: center;
+       padding: 2rem 0 5rem 0;
+       
+
+       @media only screen and (max-width: 600px) {
+        width: 70%;
+        text-align: center;
+        padding: 5rem 0 3rem 0;
+    }
+
+    @media only screen and (max-width: 700px) {
+        font-size: 3rem;;
+    }
+    }
+    
+    &__nav__box {
+      display: flex;
+     width: 60vw;
+     justify-content: space-evenly;
+     list-style-type: none;
+     align-self: center;
+    }
+
+    &__link {
+        font-size: 1.5rem;
+         padding: 1rem;
+     
+
+        &:hover {
+       transform: rotate(10deg);
+       background-color: $color-blue;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.602);
+        
+        }
+    }
+
+    &__link--copy {
+      padding-bottom: 1px;
+        
+        &:hover {
+             border-bottom: 2px solid rgb(204, 204, 91);
+        }
+      
+    }
+
+  
+
+    &__copyright {
+        align-self: center;
+         font-size: 1rem;
+
+        @media only screen and (max-width: 900px) {
+            width: 40%;
+            text-align: center;
+        }
+    }
+
+    &__icons {
+        align-self: center;
+        font-size: 2rem;
+        width: 20%;
+        
+        display: flex;
+        justify-content: space-evenly;
+        cursor: pointer;
+        @media only screen and (max-width: 900px) {
+            width: 40%;
+        }
+    }
+
+  
+}
+
+a {
+    color: $color-blueDark;
+    text-decoration: none;
+}
+
+
+.fab, .far {
+   color: rgb(255, 255, 255);
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+

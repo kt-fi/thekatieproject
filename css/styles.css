@@ -432,12 +432,15 @@ button:disabled:hover {
   justify-content: space-evenly;
   background-color: white;
   padding-bottom: 5rem; }
-  @media (max-width: 600px) {
-    .portfolio__container {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      width: 85%; } }
+  .portfolio__container {
+    width: 25%;
+    margin: 0 2rem; }
+    @media (max-width: 600px) {
+      .portfolio__container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 85%; } }
   .portfolio__header {
     width: 85%;
     text-align: center;

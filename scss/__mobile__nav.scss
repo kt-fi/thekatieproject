@@ -1,0 +1,255 @@
+// BUTTON AND ANIMATION
+
+.mobile__nav { 
+
+    &__button {
+        position: fixed;
+        top: 2rem;
+        right:3rem;
+        background-color: $color-blue;
+        height:5rem;
+        width: 5rem;
+        border-radius: 50%;
+        box-shadow: 3px 3px 3px rgb(46, 46, 46);;
+        z-index: 3;
+        transition: all 0.1s;
+
+        &__before {
+            position: fixed;
+            top: 2rem;
+            right:3rem;
+            background-color:$color-blue;
+            height:5rem;
+            width: 5rem;
+            border-radius: 50%;
+            z-index: 0;
+    }
+
+   
+}
+    &__burger {
+        height: 2px;
+        width: 50%;
+        background-color: black;
+
+        position: absolute;
+        top: 49%;
+        right: 25%;
+    }  
+
+    &__burger__after {
+        height: 2px;
+        width: 50%;
+        background-color: black;
+        position: absolute;
+        top: 35%;
+        right: 25%;
+
+    }
+
+    &__burger__before {
+        height: 2px;
+        width: 50%;
+        background-color: black;
+        position: absolute;
+        top: 62%;
+        right: 25%;
+
+}
+
+@media screen and(min-width: 800px){
+    visibility: hidden;
+}
+
+}
+
+
+
+
+// ANIMATIONS ******************************************************************************************************
+
+@keyframes navExpand {
+
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 50;
+    }
+}
+
+@keyframes navX {
+    0% {
+        
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 47%;
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes navX2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top:47%;
+        transform: rotate(-135deg);
+    }
+}
+
+@keyframes navXRev {
+    0% {
+        transform: rotate(135deg);
+        top:47%;
+    }
+
+    100% {
+       
+        transform: rotate(0deg);
+         top: 35%;
+    }
+}
+
+@keyframes navX2Rev {
+    0% {
+        transform: rotate(-135deg);
+        top:47%;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        top:62%;
+    }
+}
+
+@keyframes navGone {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes navGoneRev {
+    0% {
+        background-color:transparent;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+
+@keyframes navGrow {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(60);
+    }
+}
+
+
+@keyframes navShrink {
+    0% {
+        transform: scale(60);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes linksVisibilityOn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+@keyframes linksVisibilityOff {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+// ACTUAL NAVIGATION
+
+.nav {
+
+
+&__box--mob {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 100%;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    visibility: hidden;
+    
+    color: white;
+
+ }
+
+ &__head--mob {
+     color: white;
+     font-weight: 400;
+     font-size: 7rem;
+     width: 70vw;
+     text-align: center;
+
+     
+@media screen and(min-width: 800px){
+    visibility: hidden;
+}
+ }
+
+    &__link--mob {
+
+        &:hover {
+            color: $color-black;
+        cursor: pointer;
+       
+    }
+@media screen and(min-width: 800px){
+    visibility: hidden;
+}
+ }   
+
+
+
+  
+}

@@ -1,0 +1,60 @@
+.skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:$color-blueLight;
+    padding-bottom: 5rem;
+    
+    &__header {
+        width: 100%;
+        text-align: center;
+        margin: 3rem 0;
+        font-family: $headers-font;
+        font-size: 4rem;
+    }
+
+   &__box {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.219);
+        height: 15rem;
+        width: 40rem;
+        margin: 1.5rem;
+        align-items: center;
+        transition: all 1s;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.219);
+        }
+        
+
+    &--image {
+            height: 15rem;
+            width: 95%;
+            background-color: $color-blue;
+        }
+    }
+
+    &--list {
+
+    }
+
+    
+    &__box--list-item {
+            margin: 1rem;
+            list-style-type: none;
+      }
+    
+}
+
+.padding-1 {
+    padding: 0.7rem;
+}
+
+.padding-2 {
+    padding: 1.2rem;
+}
