@@ -1,0 +1,139 @@
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+    padding-bottom: 5rem;;
+    
+  
+    &__container {
+
+        width: 25%;
+        margin: 0 2rem;
+
+        @media (max-width: 600px){
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            width: 85%;
+        }
+    }
+
+    &__header {
+        width: 85%;
+        text-align: center;
+        margin: 5rem 0;
+        font-family: $headers-font;
+        font-size: 4rem;
+    }
+
+    &__box {
+        background-color: white;
+        width: 30rem;
+        height: 20rem;;
+        margin: 1rem;
+        // border: 1px solid $color-blue;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.411);
+        overflow: hidden;
+
+        @media (max-width: 600px){
+            // position: relative;
+            width: 100%;
+            height: 27rem;
+        }
+       
+        &--info a{
+            margin: 0 auto;
+        }
+
+        &--info-list-item {
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            &-text {
+                width: 25rem;
+                font-size: 1.5rem;
+                text-align: justify;
+                text-justify: inter-word;;
+                padding-bottom: 1.5rem;;
+
+                @media (max-width: 600px){
+                    font-size: 1.7rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        &--image {
+            width:30rem;
+
+            @media (max-width: 600px){
+                width: 100%;
+            }
+        }
+
+        &--image-anim {
+            width: 30rem;
+
+            @media (max-width: 600px){
+                width: 100%;
+            }
+        }
+
+        &--image-anim-1 {
+            transition: all 0.1s linear, transform 8s ease;
+            &:hover{
+                transform: translateY(-65rem);
+            }
+}
+            &--image-anim-2 {
+               
+                     transition: all 0.1s linear, transform 8s ease;
+                &:hover{
+                    transform: translateY(-88rem);
+                }
+            }
+                &--image-anim-3 {
+              
+                         transition: all 0.1s linear, transform 8s ease;
+                    &:hover{
+                        transform: translateY(-70rem);
+                    }
+                }
+                    &--image-anim-4 {
+                  
+                             transition: all 0.1s linear, transform 8s ease;
+                        &:hover{
+                            transform: translateY(-53rem);
+                        }
+                    }
+
+                    &--info {
+                        padding: 1rem 2rem;
+                        margin:1rem;
+                        background-color: $color-blueLight;
+                        
+                        & li{
+                            list-style-type: none;
+                        }
+
+                        & a {
+                            text-decoration: none;
+                            
+
+                            &:hover {
+                                color:$color-blue;
+                            }
+
+                        }
+                        
+                    }
+    }
+
+}
+
+.link {
+    color: $color-salmon;
+    font-weight: 700;
+    font-size: 1.8rem;
+}

@@ -1,0 +1,63 @@
+//Coulors
+
+$color-salmon: #f05454;
+$color-blue: #486685;
+$color-blueTrans: #486785d7;
+$color-blueLight:  rgb(246, 249, 255);
+$color-blueDark:  rgb(20, 28, 43);
+$color-black: #222831;
+
+
+//Fonts
+
+$main-font: 'Montserrat', sans-serif;
+$headers-font: 'Noto Serif TC', serif;
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: rgb(236, 236, 236);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    @media(max-width: 500px) {
+        font-size: 50%;
+      }
+}
+
+body{
+    margin: 0 auto;
+    position: relative;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.192),rgba(184, 184, 184, 0.253)), url('../images/rio.jpg') ;
+  
+    background-attachment: fixed;
+    background-size: cover;
+    
+    font-family: $main-font;
+    font-size: 2rem;
+    max-width: 1450px;;
+    overflow: hidden;
+
+    @media screen and (max-width: 780px){
+        background-image: linear-gradient( rgba(0, 0, 0, 0.192),rgba(184, 184, 184, 0.253)), url('../images/rio-sm.jpg') ;
+    }
+    
+}
+

@@ -1,0 +1,82 @@
+.about {
+    display: grid;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    margin: 0 auto;
+    grid-template-columns:74% 26%;
+    
+    align-items: center;
+    justify-content: center;
+    background-color: $color-blue;
+    height: max-content;
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 100%;
+      
+     }   
+    
+    &__header {
+        text-transform: capitalize;
+        font-weight: 900;
+        color: $color-black;
+    }
+
+    &__text--container{
+             grid-column: 1/2;
+             grid-row: 1/2;
+            height: min-content;
+            font-weight: 100;
+            width:100%;
+            background-color: $color-blue;
+            
+
+        }
+
+        &__text--box {
+            width: 90%;
+            height: min-content;
+            margin:auto;
+            margin-top: 1rem;
+           padding: 1rem 0 2rem 2rem;
+            color: white;
+            background-color: $color-blue;
+            text-align: justify;
+            text-justify: inter-word;
+         
+            
+    @media only screen and (max-width: 800px) {
+        padding: 1rem 1rem 2rem 1rem;
+      
+     }   
+
+
+
+            & h2 {
+                font-weight: 400;
+            }
+
+        }
+   
+
+    &__image--container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        height: 100%;
+        width:100%;
+        padding: 2rem 0 2rem 0;
+        background-color: $color-blue;
+
+        
+    }
+
+    &__image--image {
+        align-self: center;
+        justify-self: center;
+        width: 90%
+        
+    }
+ }
+    
