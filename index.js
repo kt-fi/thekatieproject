@@ -66,26 +66,28 @@ if(name.value && email.value && subject.value){
 
     document.getElementById("contact__form").addEventListener("submit", (e)=>{
         e.preventDefault()
-        
-        async function sendForm(){
+        sendForm();
+        })
+
+
+ async function sendForm(){
+
+
             
         try{
-        //   const res =  await fetch("http://localhost:3000/sendForm",{
-            const res = await fetch("https://radiant-woodland-87160.herokuapp.com/sendForm", {
+          await fetch("http://localhost:3000/sendMail",{
+            // const res = await fetch("https://radiant-woodland-87160.herokuapp.com/sendForm", {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json'
             }, 
             body: JSON.stringify({
-            name : document.getElementById("name").value,
-            email : document.getElementById("email").value,
-            subject : document.getElementById("subject").value
-            })})
-             $("#contact__form").trigger('reset')
-             
-             $(".backdrop").css("z-index", "99")
-             $(".modal").css("z-index", "100")
-             $('.modal__message').text("MESSAGE SENT SUCCESFULY")
+            // name : document.getElementById("name").value,
+            title : document.getElementById("email").value,
+            msg : document.getElementById("subject").value
+            })}).then(confirmSent())
+            
+            
         }
         
         catch(err){
@@ -95,11 +97,8 @@ if(name.value && email.value && subject.value){
             $('.modal__message').text("MESSAGE NOT SENT")
             }      
         }
-        sendForm();
-        })
-
 //CLOSE MODAL ------------------------
-        $('.backdrop').click(()=> {
+            $('.backdrop').click(()=> {
             $('.backdrop').css("z-index", "-100")
             $('.modal').css("z-index", "-100")
         })
@@ -114,6 +113,14 @@ if(name.value && email.value && subject.value){
 // NAV MOBILE BUTTON -----------------------------------
 
 var navOpen = false;
+
+function confirmSent() {
+    $("#contact__form").trigger('reset');
+
+    $(".backdrop").css("z-index", "99");
+    $(".modal").css("z-index", "100");
+    $('.modal__message').text("MESSAGE SENT SUCCESFULY");
+}
 
 function openNav() {
     navOpen = true;
