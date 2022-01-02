@@ -75,7 +75,7 @@ if(name.value && email.value && subject.value){
 
             
         try{
-          await fetch("https://sheltered-caverns-08486/sendMail",{
+          await fetch("https://sheltered-caverns-08486.herokuapp.com/sendMail",{
             // const res = await fetch("https://radiant-woodland-87160.herokuapp.com/sendForm", {
             method:'POST',
             headers: {
