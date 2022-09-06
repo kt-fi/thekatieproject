@@ -75,7 +75,8 @@ if(name.value && email.value && subject.value){
 
             
         try{
-          await fetch("https://sheltered-caverns-08486.herokuapp.com/sendMail",{
+            await fetch("http://localhost:3000/sendMail",{
+        //   await fetch("https://sheltered-caverns-08486.herokuapp.com/sendMail",{
             // const res = await fetch("https://radiant-woodland-87160.herokuapp.com/sendForm", {
             method:'POST',
             headers: {
@@ -94,8 +95,10 @@ if(name.value && email.value && subject.value){
             console.log(err)
             $(".backdrop").css("z-index", "99")
             $(".modal").css("z-index", "100")
-            $('.modal__message').text("MESSAGE NOT SENT")
+            $('.modal__message').text("MESSAGE NOT SENT, Error conecting to server,  please send email to kt-five@hotmail.com")
             }      
+
+
         }
 //CLOSE MODAL ------------------------
             $('.backdrop').click(()=> {

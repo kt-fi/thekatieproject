@@ -541,6 +541,14 @@ button:disabled:hover {
     width: 85%;
   }
 }
+@media (max-width: 760px) {
+  .portfolio__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 40%;
+  }
+}
 .portfolio__header {
   width: 85%;
   text-align: center;
@@ -948,24 +956,17 @@ a {
   z-index: -1009;
 }
 
-.curve {
-  grid-row: 2/3;
-  grid-column: 2/3;
-  height: 100%;
-  opacity: 0.83;
-}
-@media only screen and (max-width: 800px) {
-  .curve {
-    visibility: hidden;
-  }
-}
-
 .header {
   background-size: cover;
   display: grid;
   grid-template-columns: 50% 45.9px 1fr;
-  grid-template-rows: 15% 0% 85%;
+  grid-template-rows: 20% 0% 80%;
   height: 75vh;
+}
+@media only screen and (max-width: 760px) {
+  .header {
+    grid-template-rows: 20% 0% 80%;
+  }
 }
 .header__logobox {
   display: flex;
