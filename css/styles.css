@@ -748,17 +748,21 @@ button:disabled:hover {
   color: white;
   align-self: center;
   padding: 2rem 0 5rem 0;
+  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   .footer__header {
     width: 70%;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 5rem 0 3rem 0;
+    padding: 2rem 0 3rem 0;
   }
 }
 @media only screen and (max-width: 700px) {
   .footer__header {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
   }
 }
 .footer__nav__box {
@@ -847,7 +851,7 @@ a {
 }
 @media screen and (max-width: 700px) {
   .startupHook__loading--box-logo {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .startupHook__loading--welcometext {
