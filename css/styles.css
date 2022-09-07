@@ -495,18 +495,19 @@ button:disabled:hover {
   grid-template-columns: 40% 60%;
   background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.219);
-  height: 15rem;
-  width: 40rem;
+  height: 11rem;
+  width: 30rem;
   margin: 1.5rem;
   align-items: center;
   transition: all 1s;
+  font-size: 1.5rem;
 }
 .skills__box:hover {
   transform: scale(1.1);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.219);
 }
 .skills__box--image {
-  height: 15rem;
+  height: 11rem;
   width: 95%;
   background-color: #0F3460;
 }
